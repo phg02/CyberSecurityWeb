@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- DONE -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This page allow users to change the account and web's settings">
+    <title>PawPals</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/setting.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/797e28e901.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kreon:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg" href="{{url_for('static', filename='/image/logo.svg')}}">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+    <body>
+        <div class="wrapper">
+            <div class="photo">
+                <div class="info">
+                    <p><strong>{{user}}</strong></p>
+                    <p>{{password}}</p>
+                </div>
+            </div>
+            <a href="/signout" class="logoutBtn">Logout</a>
+        </div>
+
+            
+            
+    </body>
+</body>
+
+</html>
