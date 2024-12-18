@@ -5,7 +5,7 @@ from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from flask import Flask, session
 from flask_session import Session
-import html 
+import html
 from bcrypt import hashpw, gensalt, checkpw  # Import bcrypt functions
 import bleach
 
@@ -14,6 +14,7 @@ app = Flask(__name__)
 app.secret_key = 'super_secure_key'
 app.config['SESSION_COOKIE_SECURE'] = True  # Ensure cookies are transmitted securely
 app.config['SESSION_COOKIE_HTTPONLY'] = True  # Prevent JavaScript access
+app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'  # Prevents CSRF in cross-site contexts
 Session(app)
 
 
