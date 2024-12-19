@@ -8,6 +8,7 @@ from flask_session import Session
 import html
 from bcrypt import hashpw, gensalt, checkpw  # Import bcrypt functions
 import bleach
+import logging
 
 app = Flask(__name__)
 
@@ -16,6 +17,33 @@ app.config['SESSION_COOKIE_SECURE'] = True  # Ensure cookies are transmitted sec
 app.config['SESSION_COOKIE_HTTPONLY'] = True  # Prevent JavaScript access
 app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'  # Prevents CSRF in cross-site contexts
 Session(app)
+
+# Configure logging
+logging.basicConfig(
+    filename='app.log',  # Log file name
+    level=logging.INFO,  # Logging level
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+
+
+@app.after_request
+def add_security_headers(response):
+    response.headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains'
+    response.headers['Content-Security-Policy'] = (
+        "default-src 'self'; "
+        "script-src 'self' https://cdn.jsdelivr.net https://kit.fontawesome.com https://www.google.com https://www.gstatic.com; "
+        "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; "
+        "font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; "
+        "img-src 'self' data:; "
+        "connect-src 'self'; "
+        "object-src 'none'; "
+        "frame-src 'self' https://www.google.com https://www.gstatic.com; "
+        "frame-ancestors 'none';")
+    response.headers['X-Content-Type-Options'] = 'nosniff'
+    response.headers['X-Frame-Options'] = 'SAMEORIGIN'
+    response.headers['Referrer-Policy'] = 'no-referrer'
+    response.headers['Permissions-Policy'] = 'geolocation=(), microphone=()'
+    return response
 
 
 # Initialize Limiter with the app
@@ -89,19 +117,25 @@ def check_sql_injection(user_input: str) -> bool:
 
 @app.route('/')
 def hello_world():
+    user_ip = request.remote_addr
+    logging.info(f"Sign-in page accessed. IP: {user_ip}")
     return render_template('signin.html');
 
 @app.route('/signout')
 def signout():
+    user_ip = request.remote_addr
+    logging.info(f"Sign-out. IP: {user_ip}")
     session.pop('user', None)
     return redirect("/")
 
 
 
 @app.route('/signup', methods=['GET', 'POST'])
-@limiter.limit("5 per minute")  # Limit requests to 5 per minute
+@limiter.limit("10 per minute")  # Limit requests to 5 per minute
 def signup():
+    user_ip = request.remote_addr  # Get client IP address
     if request.method == 'GET':
+        logging.info(f"Sign-up page accessed. IP: {user_ip}")
         return render_template('signup.html')
     else:
         username = request.form['username']
@@ -133,12 +167,12 @@ def signup():
             query = "INSERT INTO users (email, password) VALUES (?, ?)"
             cursor.execute(query, (cleanEmail, hashedPassword))
             conn.commit()
-            print("User registered:", cleanEmail)
+            logging.info(f"User registered successfully. Email: {cleanEmail}, IP: {user_ip}")
             
             return render_template('signin.html', message="User registered successfully. Please sign in.")
         
         except sqlite3.Error as e:
-            print("Database error:", e)
+            logging.error(f"Database error during sign-up. IP: {user_ip}, Error: {e}")
             return render_template('error.html', error="Database error")
         
         finally:
@@ -148,19 +182,20 @@ def signup():
     
 
 @app.route('/signin', methods=['POST'])
-@limiter.limit("5 per minute")  # Rate limit for this specific route
+@limiter.limit("10 per minute")  # Rate limit for this specific route
 def signin():
+    user_ip = request.remote_addr  # Get client IP address
     email = request.form['email']
     password = request.form['password']
 
     # Input validation for XSS
     if check_xss_input(email) or check_xss_input(password):
-        print("XSS detected.")
+        logging.warning(f"XSS detected during sign-in. IP: {user_ip}")
         return render_template('error.html', error="XSS detected")
 
     # Input validation for SQL Injection
     if check_sql_injection(email) or check_sql_injection(password):
-        print("SQL Injection detected.")
+        logging.warning(f"SQL Injection detected during sign-in. IP: {user_ip}")
         return render_template('error.html', error="SQL Injection detected")
 
     # Connect to the SQLite database
@@ -174,25 +209,21 @@ def signin():
         user = cursor.fetchone()  # Fetch a single matching user
 
         if user:
-            print("Login successful for:", email)
+            logging.info(f"User login successful. Email: {email}, IP: {user_ip}")
             session['user'] = email
             return render_template('site.html', user=email, password=password)  # Redirect to the main page
         else:
-            print("Invalid credentials for:", email)
+            logging.warning(f"Invalid login attempt. Email: {email}, IP: {user_ip}")
             return render_template('error.html', error="Invalid credentials")
 
     except sqlite3.Error as e:
-        print("Database error:", e)
+        logging.error(f"Database error during sign-in. IP: {user_ip}, Error: {e}")
         return render_template('error.html', error="Database error")
 
     finally:
         cursor.close()
         conn.close()
 
-
-# @app.route('/error/<string:error>')
-# def error():
-#     return render_template('error.html', error=error);
 
 if __name__ == '__main__':
     app.run(debug=True)
