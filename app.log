@@ -599,3 +599,138 @@
 2024-12-18 20:22:15,621 - INFO - 127.0.0.1 - - [18/Dec/2024 20:22:15] "[36mGET /static/css/shared/form.css HTTP/1.1[0m" 304 -
 2024-12-18 20:22:15,624 - INFO - 127.0.0.1 - - [18/Dec/2024 20:22:15] "[33mGET /static/css/shared/shared/variables.css HTTP/1.1[0m" 404 -
 2024-12-18 20:22:15,625 - INFO - 127.0.0.1 - - [18/Dec/2024 20:22:15] "[36mGET /static/image/logo.svg HTTP/1.1[0m" 304 -
+2024-12-20 21:35:04,452 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-20 21:35:04,452 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-20 21:35:04,453 - INFO -  * Restarting with stat
+2024-12-20 21:35:04,570 - WARNING -  * Debugger is active!
+2024-12-20 21:35:04,576 - INFO -  * Debugger PIN: 180-153-276
+2024-12-20 21:35:16,491 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:16] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+2024-12-20 21:35:16,493 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:16] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2024-12-20 21:35:16,494 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-20 21:35:19,350 - INFO - Sign-in page accessed. IP: 127.0.0.1
+2024-12-20 21:35:19,356 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:19] "GET / HTTP/1.1" 200 -
+2024-12-20 21:35:19,404 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:19] "GET /static/image/view-adorable-3d-cat%20(1)%204.png HTTP/1.1" 200 -
+2024-12-20 21:35:19,404 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:19] "GET /static/css/signin.css HTTP/1.1" 200 -
+2024-12-20 21:35:19,404 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:19] "GET /static/image/paws.png HTTP/1.1" 200 -
+2024-12-20 21:35:19,408 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:19] "GET /static/css/shared/form.css HTTP/1.1" 200 -
+2024-12-20 21:35:19,408 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:19] "GET /static/css/shared/fonts.css HTTP/1.1" 200 -
+2024-12-20 21:35:19,409 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:19] "GET /static/css/shared/variables.css HTTP/1.1" 200 -
+2024-12-20 21:35:19,409 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:19] "GET /static/css/shared/buttons.css HTTP/1.1" 200 -
+2024-12-20 21:35:19,410 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:19] "[33mGET /static/css/shared/shared/variables.css HTTP/1.1[0m" 404 -
+2024-12-20 21:35:19,923 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:19] "GET /static/javascript/signin.js HTTP/1.1" 200 -
+2024-12-20 21:35:19,928 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:19] "GET /static/image/logo.svg HTTP/1.1" 200 -
+2024-12-20 21:35:21,363 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:21] "[32mGET /static//image/logo.svg HTTP/1.1[0m" 308 -
+2024-12-20 21:35:21,366 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:21] "[36mGET /static/image/logo.svg HTTP/1.1[0m" 304 -
+2024-12-20 21:35:29,032 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:29] "[33mGET /searchproduct HTTP/1.1[0m" 404 -
+2024-12-20 21:35:29,053 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-20 21:35:44,870 - INFO -  * Detected change in '/Users/thunguyen/Documents/CyberSecurityWeb/app.py', reloading
+2024-12-20 21:35:44,919 - INFO -  * Restarting with stat
+2024-12-20 21:35:45,124 - WARNING -  * Debugger is active!
+2024-12-20 21:35:45,134 - INFO -  * Debugger PIN: 180-153-276
+2024-12-20 21:35:46,144 - INFO -  * Detected change in '/Users/thunguyen/Documents/CyberSecurityWeb/app.py', reloading
+2024-12-20 21:35:46,186 - INFO -  * Restarting with stat
+2024-12-20 21:35:46,330 - WARNING -  * Debugger is active!
+2024-12-20 21:35:46,348 - INFO -  * Debugger PIN: 180-153-276
+2024-12-20 21:35:47,761 - INFO - Sign-in page accessed. IP: 127.0.0.1
+2024-12-20 21:35:47,769 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:47] "GET / HTTP/1.1" 200 -
+2024-12-20 21:35:47,798 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:47] "GET /static/image/logo.svg HTTP/1.1" 200 -
+2024-12-20 21:35:47,799 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:47] "[36mGET /static/javascript/signin.js HTTP/1.1[0m" 304 -
+2024-12-20 21:35:47,799 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:47] "GET /static/image/view-adorable-3d-cat%20(1)%204.png HTTP/1.1" 200 -
+2024-12-20 21:35:47,799 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:47] "[36mGET /static/image/paws.png HTTP/1.1[0m" 304 -
+2024-12-20 21:35:47,799 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:47] "[36mGET /static/css/signin.css HTTP/1.1[0m" 304 -
+2024-12-20 21:35:47,808 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:47] "GET /static/css/shared/variables.css HTTP/1.1" 200 -
+2024-12-20 21:35:47,810 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:47] "[36mGET /static/css/shared/fonts.css HTTP/1.1[0m" 304 -
+2024-12-20 21:35:47,810 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:47] "[36mGET /static/css/shared/buttons.css HTTP/1.1[0m" 304 -
+2024-12-20 21:35:47,810 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:47] "[36mGET /static/css/shared/form.css HTTP/1.1[0m" 304 -
+2024-12-20 21:35:47,812 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:47] "[33mGET /static/css/shared/shared/variables.css HTTP/1.1[0m" 404 -
+2024-12-20 21:35:51,191 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:51] "[35m[1mGET /search HTTP/1.1[0m" 500 -
+2024-12-20 21:35:51,204 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:51] "GET /search?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-20 21:35:51,205 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:51] "GET /search?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-12-20 21:35:51,225 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:51] "GET /search?__debugger__=yes&cmd=resource&f=console.png&s=woG1w7aWF9teIppNOZ6l HTTP/1.1" 200 -
+2024-12-20 21:35:51,313 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:51] "GET /search?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-20 21:35:54,236 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:54] "[35m[1mGET /searchproduct HTTP/1.1[0m" 500 -
+2024-12-20 21:35:54,247 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:54] "GET /searchproduct?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-12-20 21:35:54,247 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:54] "GET /searchproduct?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-12-20 21:35:54,251 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:54] "GET /searchproduct?__debugger__=yes&cmd=resource&f=console.png&s=woG1w7aWF9teIppNOZ6l HTTP/1.1" 200 -
+2024-12-20 21:35:54,259 - INFO - 127.0.0.1 - - [20/Dec/2024 21:35:54] "GET /searchproduct?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-12-20 21:36:06,955 - INFO - 127.0.0.1 - - [20/Dec/2024 21:36:06] "GET /searchproduct HTTP/1.1" 200 -
+2024-12-20 21:36:10,343 - INFO - 127.0.0.1 - - [20/Dec/2024 21:36:10] "POST /search HTTP/1.1" 200 -
+2024-12-20 21:36:27,516 - INFO - 127.0.0.1 - - [20/Dec/2024 21:36:27] "GET /searchproduct HTTP/1.1" 200 -
+2024-12-20 22:07:13,645 - INFO - Sign-in page accessed. IP: 127.0.0.1
+2024-12-20 22:07:13,648 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:13] "GET / HTTP/1.1" 200 -
+2024-12-20 22:07:13,666 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:13] "[36mGET /static/css/signin.css HTTP/1.1[0m" 304 -
+2024-12-20 22:07:13,666 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:13] "[36mGET /static/javascript/signin.js HTTP/1.1[0m" 304 -
+2024-12-20 22:07:13,668 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:13] "[36mGET /static/image/paws.png HTTP/1.1[0m" 304 -
+2024-12-20 22:07:13,670 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:13] "[36mGET /static/image/logo.svg HTTP/1.1[0m" 304 -
+2024-12-20 22:07:13,670 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:13] "[36mGET /static/image/view-adorable-3d-cat%20(1)%204.png HTTP/1.1[0m" 304 -
+2024-12-20 22:07:13,674 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:13] "[36mGET /static/css/shared/variables.css HTTP/1.1[0m" 304 -
+2024-12-20 22:07:13,675 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:13] "[36mGET /static/css/shared/form.css HTTP/1.1[0m" 304 -
+2024-12-20 22:07:13,675 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:13] "[36mGET /static/css/shared/fonts.css HTTP/1.1[0m" 304 -
+2024-12-20 22:07:13,676 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:13] "[36mGET /static/css/shared/buttons.css HTTP/1.1[0m" 304 -
+2024-12-20 22:07:13,678 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:13] "[33mGET /static/css/shared/shared/variables.css HTTP/1.1[0m" 404 -
+2024-12-20 22:07:29,249 - INFO - User login successful. Email: user1@example.com, IP: 127.0.0.1
+2024-12-20 22:07:29,255 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:29] "POST /signin HTTP/1.1" 200 -
+2024-12-20 22:07:29,265 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:29] "[32mGET /static//css/setting.css HTTP/1.1[0m" 308 -
+2024-12-20 22:07:29,269 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:29] "GET /static/css/setting.css HTTP/1.1" 200 -
+2024-12-20 22:07:31,723 - INFO - Sign-out. IP: 127.0.0.1
+2024-12-20 22:07:31,724 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:31] "[32mGET /signout HTTP/1.1[0m" 302 -
+2024-12-20 22:07:31,734 - INFO - Sign-in page accessed. IP: 127.0.0.1
+2024-12-20 22:07:31,735 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:31] "GET / HTTP/1.1" 200 -
+2024-12-20 22:07:31,751 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:31] "[36mGET /static/javascript/signin.js HTTP/1.1[0m" 304 -
+2024-12-20 22:07:31,752 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:31] "[36mGET /static/css/signin.css HTTP/1.1[0m" 304 -
+2024-12-20 22:07:31,759 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:31] "[36mGET /static/image/logo.svg HTTP/1.1[0m" 304 -
+2024-12-20 22:07:31,763 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:31] "[36mGET /static/image/paws.png HTTP/1.1[0m" 304 -
+2024-12-20 22:07:31,765 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:31] "[36mGET /static/image/view-adorable-3d-cat%20(1)%204.png HTTP/1.1[0m" 304 -
+2024-12-20 22:07:31,766 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:31] "[36mGET /static/css/shared/fonts.css HTTP/1.1[0m" 304 -
+2024-12-20 22:07:31,773 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:31] "[36mGET /static/css/shared/buttons.css HTTP/1.1[0m" 304 -
+2024-12-20 22:07:31,776 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:31] "[36mGET /static/css/shared/variables.css HTTP/1.1[0m" 304 -
+2024-12-20 22:07:31,777 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:31] "[36mGET /static/css/shared/form.css HTTP/1.1[0m" 304 -
+2024-12-20 22:07:31,777 - INFO - 127.0.0.1 - - [20/Dec/2024 22:07:31] "[33mGET /static/css/shared/shared/variables.css HTTP/1.1[0m" 404 -
+2024-12-21 08:20:39,046 - INFO -  * Detected change in '/Users/thunguyen/Documents/CyberSecurityWeb/app.py', reloading
+2024-12-21 08:20:39,096 - INFO -  * Restarting with stat
+2024-12-21 08:20:39,495 - WARNING -  * Debugger is active!
+2024-12-21 08:20:39,505 - INFO -  * Debugger PIN: 180-153-276
+2024-12-21 08:55:39,767 - INFO - Sign-in page accessed. IP: 127.0.0.1
+2024-12-21 08:55:39,779 - INFO - 127.0.0.1 - - [21/Dec/2024 08:55:39] "GET / HTTP/1.1" 200 -
+2024-12-21 08:55:39,818 - INFO - 127.0.0.1 - - [21/Dec/2024 08:55:39] "[36mGET /static/image/paws.png HTTP/1.1[0m" 304 -
+2024-12-21 08:55:39,819 - INFO - 127.0.0.1 - - [21/Dec/2024 08:55:39] "[36mGET /static/css/signin.css HTTP/1.1[0m" 304 -
+2024-12-21 08:55:39,819 - INFO - 127.0.0.1 - - [21/Dec/2024 08:55:39] "[36mGET /static/javascript/signin.js HTTP/1.1[0m" 304 -
+2024-12-21 08:55:39,819 - INFO - 127.0.0.1 - - [21/Dec/2024 08:55:39] "[36mGET /static/image/view-adorable-3d-cat%20(1)%204.png HTTP/1.1[0m" 304 -
+2024-12-21 08:55:39,819 - INFO - 127.0.0.1 - - [21/Dec/2024 08:55:39] "[36mGET /static/image/logo.svg HTTP/1.1[0m" 304 -
+2024-12-21 08:55:39,824 - INFO - 127.0.0.1 - - [21/Dec/2024 08:55:39] "[36mGET /static/css/shared/variables.css HTTP/1.1[0m" 304 -
+2024-12-21 08:55:39,825 - INFO - 127.0.0.1 - - [21/Dec/2024 08:55:39] "[36mGET /static/css/shared/fonts.css HTTP/1.1[0m" 304 -
+2024-12-21 08:55:39,826 - INFO - 127.0.0.1 - - [21/Dec/2024 08:55:39] "[36mGET /static/css/shared/form.css HTTP/1.1[0m" 304 -
+2024-12-21 08:55:39,826 - INFO - 127.0.0.1 - - [21/Dec/2024 08:55:39] "[36mGET /static/css/shared/buttons.css HTTP/1.1[0m" 304 -
+2024-12-21 08:55:39,828 - INFO - 127.0.0.1 - - [21/Dec/2024 08:55:39] "[33mGET /static/css/shared/shared/variables.css HTTP/1.1[0m" 404 -
+2024-12-21 09:32:51,510 - INFO -  * Detected change in '/Users/thunguyen/Documents/CyberSecurityWeb/app.py', reloading
+2024-12-21 09:32:51,559 - INFO -  * Restarting with stat
+2024-12-21 09:32:51,804 - WARNING -  * Debugger is active!
+2024-12-21 09:32:51,815 - INFO -  * Debugger PIN: 180-153-276
+2024-12-21 15:38:25,329 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-21 15:38:25,329 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-21 15:38:25,330 - INFO -  * Restarting with stat
+2024-12-21 15:38:25,451 - WARNING -  * Debugger is active!
+2024-12-21 15:38:25,462 - INFO -  * Debugger PIN: 180-153-276
+2024-12-21 15:38:51,289 - WARNING - SQL Injection detected during sign-in. IP: 127.0.0.1
+2024-12-21 15:38:51,295 - INFO - 127.0.0.1 - - [21/Dec/2024 15:38:51] "POST /signin HTTP/1.1" 200 -
+2024-12-21 15:38:51,307 - INFO - 127.0.0.1 - - [21/Dec/2024 15:38:51] "[32mGET /static//css/settingError.css HTTP/1.1[0m" 308 -
+2024-12-21 15:38:51,316 - INFO - 127.0.0.1 - - [21/Dec/2024 15:38:51] "GET /static/css/settingError.css HTTP/1.1" 200 -
+2024-12-21 15:38:51,331 - INFO - 127.0.0.1 - - [21/Dec/2024 15:38:51] "[36mGET /static/css/shared/form.css HTTP/1.1[0m" 304 -
+2024-12-21 15:38:51,332 - INFO - 127.0.0.1 - - [21/Dec/2024 15:38:51] "[36mGET /static/css/shared/variables.css HTTP/1.1[0m" 304 -
+2024-12-21 15:38:51,332 - INFO - 127.0.0.1 - - [21/Dec/2024 15:38:51] "[36mGET /static/css/shared/buttons.css HTTP/1.1[0m" 304 -
+2024-12-21 15:38:51,333 - INFO - 127.0.0.1 - - [21/Dec/2024 15:38:51] "[36mGET /static/css/shared/fonts.css HTTP/1.1[0m" 304 -
+2024-12-21 15:38:51,336 - INFO - 127.0.0.1 - - [21/Dec/2024 15:38:51] "[33mGET /static/css/shared/shared/variables.css HTTP/1.1[0m" 404 -
+2024-12-21 15:38:53,586 - INFO - Sign-in page accessed. IP: 127.0.0.1
+2024-12-21 15:38:53,592 - INFO - 127.0.0.1 - - [21/Dec/2024 15:38:53] "GET / HTTP/1.1" 200 -
+2024-12-21 15:38:53,612 - INFO - 127.0.0.1 - - [21/Dec/2024 15:38:53] "[36mGET /static/css/signin.css HTTP/1.1[0m" 304 -
+2024-12-21 15:38:53,614 - INFO - 127.0.0.1 - - [21/Dec/2024 15:38:53] "[36mGET /static/image/logo.svg HTTP/1.1[0m" 304 -
+2024-12-21 15:38:53,617 - INFO - 127.0.0.1 - - [21/Dec/2024 15:38:53] "[36mGET /static/javascript/signin.js HTTP/1.1[0m" 304 -
+2024-12-21 15:38:53,621 - INFO - 127.0.0.1 - - [21/Dec/2024 15:38:53] "[36mGET /static/image/paws.png HTTP/1.1[0m" 304 -
+2024-12-21 15:38:53,625 - INFO - 127.0.0.1 - - [21/Dec/2024 15:38:53] "[36mGET /static/image/view-adorable-3d-cat%20(1)%204.png HTTP/1.1[0m" 304 -
+2024-12-21 15:38:53,625 - INFO - 127.0.0.1 - - [21/Dec/2024 15:38:53] "[36mGET /static/css/shared/variables.css HTTP/1.1[0m" 304 -
+2024-12-21 15:38:53,625 - INFO - 127.0.0.1 - - [21/Dec/2024 15:38:53] "[36mGET /static/css/shared/buttons.css HTTP/1.1[0m" 304 -
+2024-12-21 15:38:53,627 - INFO - 127.0.0.1 - - [21/Dec/2024 15:38:53] "[36mGET /static/css/shared/fonts.css HTTP/1.1[0m" 304 -
+2024-12-21 15:38:53,627 - INFO - 127.0.0.1 - - [21/Dec/2024 15:38:53] "[36mGET /static/css/shared/form.css HTTP/1.1[0m" 304 -
+2024-12-21 15:38:53,639 - INFO - 127.0.0.1 - - [21/Dec/2024 15:38:53] "[33mGET /static/css/shared/shared/variables.css HTTP/1.1[0m" 404 -

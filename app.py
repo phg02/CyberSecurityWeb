@@ -5,10 +5,12 @@ from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from flask import Flask, session
 from flask_session import Session
-import html
 from bcrypt import hashpw, gensalt, checkpw  # Import bcrypt functions
 import bleach
 import logging
+import os
+import subprocess
+import shlex
 
 app = Flask(__name__)
 
@@ -224,6 +226,59 @@ def signin():
         cursor.close()
         conn.close()
 
+# Path to the products.txt file
+PRODUCTS_FILE = os.path.join(os.getcwd(), 'products.txt')
+
+# Function to validate input
+def validate_input(user_input):
+    """Validate input to allow only alphanumeric characters and spaces"""
+    if re.match("^[a-zA-Z0-9 ]+$", user_input):
+        return True
+    return False
+
+@app.route('/searchproduct')
+def index():
+    # Load all products if the page is first accessed (no query)
+    with open(PRODUCTS_FILE, 'r') as file:
+        all_products = file.readlines()
+    return render_template('index.html', results=[product.strip() for product in all_products])
+
+@app.route('/search', methods=['POST', 'GET'])
+def search():
+    query = request.form.get('query', '')
+    
+    # Default behavior: show all products if no query is provided
+    if not query:
+        with open(PRODUCTS_FILE, 'r') as file:
+            all_products = file.readlines()
+        return render_template('index.html', query=query, results=[product.strip() for product in all_products])
+
+    # If query is provided, validate and search
+    if validate_input(query):
+        if not os.path.exists(PRODUCTS_FILE):
+            return render_template('index.html', error="Products file not found.")
+        
+        try:
+            # Safely split the query string
+            safe_query = shlex.split(query)
+            
+            # Use subprocess to search through products.txt
+            result = subprocess.run(
+                ['grep', '-i'] + safe_query + [PRODUCTS_FILE], 
+                capture_output=True, text=True, check=True
+            )
+            
+            # If there are matches, result.stdout will contain the matching lines
+            search_results = result.stdout.splitlines()
+            
+            return render_template('index.html', query=query, results=search_results)
+        
+        except subprocess.CalledProcessError:
+            return render_template('index.html', query=query, results=[], error="No results found.")
+    
+    else:
+        error = 'Invalid input detected! Only alphanumeric characters and spaces are allowed.'
+        return render_template('index.html', error=error)
 
 if __name__ == '__main__':
     app.run(debug=True)
